@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Return to Judaism — a multilingual learning space for Torah, Tanakh, Jewish history, Hebrew and Jewish thought.">
+  <meta name="theme-color" content="#101d38">
+  <title>Return to Judaism | תורה • מסורת • לימוד</title>
+  <style>
+    :root{--navy:#101d38;--navy2:#1b2d4c;--gold:#d9b65b;--cream:#f7f5ef;--ink:#202a3b;--muted:#667085;--line:#e7e3d9}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:var(--navy);color:white;position:sticky;top:0;z-index:5;border-bottom:1px solid #ffffff20}
+    .bar{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.04em}.mark{width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:20px}
+    nav{display:flex;align-items:center;gap:20px;font-size:14px;color:#e9edf5}nav a:hover{color:var(--gold)}
+    .tools{display:flex;align-items:center;gap:9px}.lang, .menu{border:1px solid #ffffff55;background:transparent;color:white;border-radius:8px;padding:8px 10px;font:inherit}.menu{display:none}
+    .hero{background:linear-gradient(120deg,#101d38f5,#182c4bdc),radial-gradient(circle at 80% 20%,#d9b65b55,transparent 35%);color:white;padding:76px 0 68px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.15em;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(36px,5vw,58px);line-height:1.1;margin:14px 0 18px;letter-spacing:-.03em}.hebrew{font-family:Georgia,"Times New Roman",serif;direction:rtl;color:#f1d88d;font-size:clamp(26px,4vw,42px);margin:0 0 10px}
+    .lead{color:#e0e6f0;font-size:18px;max-width:590px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+    .btn{display:inline-block;padding:12px 19px;border-radius:9px;font-weight:750}.primary{background:var(--gold);color:#17233a}.secondary{border:1px solid #ffffff70;color:white}
+    .hero-art{min-height:290px;border:1px solid #ffffff35;border-radius:20px;background:linear-gradient(145deg,#ffffff12,#ffffff05);display:grid;place-items:center;padding:30px;position:relative}
+    .scroll{width:min(340px,100%);height:190px;background:linear-gradient(90deg,#c8a86a,#f4e6c1 18%,#fff4d9 50%,#e6d1a0 82%,#b89454);border-radius:48% 8% 8% 48%/50% 8% 8% 50%;box-shadow:0 20px 45px #0006;transform:rotate(-5deg);display:grid;place-items:center;color:#5b4829;font-family:Georgia,serif;font-size:30px;text-align:center;padding:20px}
+    .scroll:before,.scroll:after{content:"";position:absolute;width:25px;height:210px;border-radius:20px;background:linear-gradient(90deg,#8b6736,#e3c88e,#8b6736);top:-10px}.scroll:before{left:-13px}.scroll:after{right:-13px}
+    section{padding:66px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 34px}.section-head h2{font-size:clamp(27px,3vw,36px);margin:8px 0}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:23px;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #18243a12}.ico{width:42px;height:42px;border-radius:12px;background:#f5edda;color:#80621e;display:grid;place-items:center;font-size:21px}.card h3{margin:13px 0 6px}.card p{color:var(--muted);font-size:14px;margin:0}
+    .feature{background:#eef0f2}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.feature-panel{background:var(--navy);color:white;border-radius:18px;padding:28px}.feature-panel h3{color:#f1d88d;margin-top:0}.feature-panel p{color:#dce3ee}
+    .article-list{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.article{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.article-top{height:105px;background:linear-gradient(135deg,#1b2d4c,#8c7544);display:grid;place-items:center;color:#f4d98e;font-size:32px}.article-body{padding:18px}.tag{font-size:11px;color:#85671f;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.article h3{margin:7px 0}.article p{font-size:14px;color:var(--muted);margin:0}
+    .about{background:white}.about-box{max-width:800px;margin:auto;text-align:center}.about-box p{color:var(--muted)}
+    footer{background:var(--navy);color:#dce3ee;padding:34px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot small{color:#aebbd0}
+    .rtl{text-align:right;direction:rtl}
+    @media(max-width:800px){nav{display:none;position:absolute;left:4%;right:4%;top:70px;background:var(--navy2);padding:18px;border-radius:12px;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.hero-grid,.feature-grid{grid-template-columns:1fr}.hero{padding:55px 0}.hero-art{min-height:230px}.cards,.article-list{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.cards,.article-list{grid-template-columns:1fr}.brand{font-size:13px}.hero-art{min-height:205px}.scroll{height:145px;font-size:24px}.bar{min-height:64px}.tools{gap:6px}.lang{padding:7px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#home"><span class="mark">✡</span><span>RETURN TO JUDAISM</span></a>
+    <nav id="nav">
+      <a href="#study" data-i="navStudy">Study</a><a href="#library" data-i="navLibrary">Library</a><a href="#about" data-i="navAbout">About</a><a href="#contact" data-i="navContact">Contact</a>
+    </nav>
+    <div class="tools"><select class="lang" id="language" aria-label="Choose language"><option value="en">English</option><option value="am">አማርኛ</option><option value="he">עברית</option></select><button class="menu" id="menu" aria-label="Open menu">☰</button></div>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow" data-i="eyebrow">Torah • Tradition • Learning</div>
+        <p class="hebrew">שובו אל התורה</p>
+        <h1 data-i="heroTitle">Discover the depth and beauty of Judaism.</h1>
+        <p class="lead" data-i="heroText">A learning space for Torah, Tanakh, Jewish history, Hebrew and Jewish thought — grounded in sources and presented with care.</p>
+        <div class="actions"><a class="btn primary" href="#study" data-i="explore">Explore Jewish learning</a><a class="btn secondary" href="#about" data-i="mission">Our mission</a></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative Torah scroll illustration"><div class="scroll">תורה<br><small>TORAH</small></div></div>
+    </div>
+  </section>
+
+  <section id="study">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow" data-i="learnEyebrow">Explore</div><h2 data-i="learnTitle">A place to learn and discover</h2><p data-i="learnText">Explore foundational Jewish subjects through organized lessons and carefully referenced articles.</p></div>
+      <div class="cards">
+        <a class="card" href="#library"><div class="ico">📜</div><h3 data-i="torah">Torah & Tanakh</h3><p data-i="torahText">Hebrew text, translations, context and classical Jewish commentary.</p></a>
+        <a class="card" href="#library"><div class="ico">⚖</div><h3 data-i="halakha">Halakha</h3><p data-i="halakhaText">Jewish practice, mitzvot and the foundations of halakhic life.</p></a>
+        <a class="card" href="#library"><div class="ico">🏛</div><h3 data-i="history">Jewish History</h3><p data-i="historyText">People, places and events across the Jewish experience.</p></a>
+        <a class="card" href="#library"><div class="ico">🛡</div><h3 data-i="apologetics">Jewish Apologetics</h3><p data-i="apologeticsText">Examine religious claims through Tanakh, Jewish sources and history.</p></a>
+        <a class="card" href="#library"><div class="ico">אב</div><h3 data-i="hebrew">Learn Hebrew</h3><p data-i="hebrewText">Build reading skills, vocabulary and understanding of biblical Hebrew.</p></a>
+        <a class="card" href="#library"><div class="ico">📚</div><h3 data-i="digital">Digital Library</h3><p data-i="digitalText">A growing collection of learning resources and study guides.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature">
+    <div class="wrap feature-grid">
+      <div><div class="eyebrow" data-i="sourcesEyebrow">Learn with sources</div><h2 data-i="sourcesTitle">Respect the text. Understand the context.</h2><p data-i="sourcesText">Our goal is to make Jewish learning accessible while clearly identifying biblical passages, classical commentators, historical evidence and modern explanations.</p></div>
+      <div class="feature-panel"><h3 data-i="aiTitle">Optional AI study assistant</h3><p data-i="aiText">An optional tool may help you find topics, clarify terms and organize study. It is not a rabbi, does not issue halakhic rulings and should never replace primary sources or qualified teachers.</p><a class="btn primary" href="#contact" data-i="aiLater">Coming in a future stage</a></div>
+    </div>
+  </section>
+
+  <section id="library">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow" data-i="libraryEyebrow">From the library</div><h2 data-i="libraryTitle">Start your learning journey</h2><p data-i="libraryText">These are sample topics. Full lessons and source references will be added as the library grows.</p></div>
+      <div class="article-list">
+        <article class="article"><div class="article-top">א</div><div class="article-body"><div class="tag">Foundations</div><h3 data-i="article1">What is Judaism?</h3><p data-i="article1Text">Faith, covenant, Torah and the Jewish people.</p></div></article>
+        <article class="article"><div class="article-top">תנ״ך</div><div class="article-body"><div class="tag">Tanakh</div><h3 data-i="article2">How to study a Tanakh passage</h3><p data-i="article2Text">Read the Hebrew, examine context and compare commentaries.</p></div></article>
+        <article class="article"><div class="article-top">שלום</div><div class="article-body"><div class="tag">Hebrew</div><h3 data-i="article3">Your first steps in Hebrew</h3><p data-i="article3Text">Letters, vowels, roots and essential vocabulary.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about"><div class="wrap about-box"><div class="eyebrow" data-i="aboutEyebrow">About this project</div><h2 data-i="aboutTitle">Knowledge rooted in Jewish sources</h2><p data-i="aboutText">Return to Judaism is being developed as a multilingual educational resource in Amharic, Hebrew and English. We aim to encourage careful study, respect for tradition and transparent use of sources.</p></div></section>
+</main>
+<footer id="contact"><div class="wrap foot"><div><strong>✡ RETURN TO JUDAISM</strong><br><small data-i="footerText">Torah • Tradition • Learning</small></div><div><a href="mailto:hello@returntojudaism.org">Contact</a><br><small>© <span id="year"></span> Return to Judaism</small></div></div></footer>
+<script>
+const translations={
+en:{navStudy:"Study",navLibrary:"Library",navAbout:"About",navContact:"Contact",eyebrow:"Torah • Tradition • Learning",heroTitle:"Discover the depth and beauty of Judaism.",heroText:"A learning space for Torah, Tanakh, Jewish history, Hebrew and Jewish thought — grounded in sources and presented with care.",explore:"Explore Jewish learning",mission:"Our mission",learnEyebrow:"Explore",learnTitle:"A place to learn and discover",learnText:"Explore foundational Jewish subjects through organized lessons and carefully referenced articles.",torah:"Torah & Tanakh",torahText:"Hebrew text, translations, context and classical Jewish commentary.",halakha:"Halakha",halakhaText:"Jewish practice, mitzvot and the foundations of halakhic life.",history:"Jewish History",historyText:"People, places and events across the Jewish experience.",apologetics:"Jewish Apologetics",apologeticsText:"Examine religious claims through Tanakh, Jewish sources and history.",hebrew:"Learn Hebrew",hebrewText:"Build reading skills, vocabulary and understanding of biblical Hebrew.",digital:"Digital Library",digitalText:"A growing collection of learning resources and study guides.",sourcesEyebrow:"Learn with sources",sourcesTitle:"Respect the text. Understand the context.",sourcesText:"Our goal is to make Jewish learning accessible while clearly identifying biblical passages, classical commentators, historical evidence and modern explanations.",aiTitle:"Optional AI study assistant",aiText:"An optional tool may help you find topics, clarify terms and organize study. It is not a rabbi, does not issue halakhic rulings and should never replace primary sources or qualified teachers.",aiLater:"Coming in a future stage",libraryEyebrow:"From the library",libraryTitle:"Start your learning journey",libraryText:"These are sample topics. Full lessons and source references will be added as the library grows.",article1:"What is Judaism?",article1Text:"Faith, covenant, Torah and the Jewish people.",article2:"How to study a Tanakh passage",article2Text:"Read the Hebrew, examine context and compare commentaries.",article3:"Your first steps in Hebrew",article3Text:"Letters, vowels, roots and essential vocabulary.",aboutEyebrow:"About this project",aboutTitle:"Knowledge rooted in Jewish sources",aboutText:"Return to Judaism is being developed as a multilingual educational resource in Amharic, Hebrew and English. We aim to encourage careful study, respect for tradition and transparent use of sources.",footerText:"Torah • Tradition • Learning"},
+am:{navStudy:"ትምህርት",navLibrary:"ቤተ መጻሕፍት",navAbout:"ስለ እኛ",navContact:"አግኙን",eyebrow:"ቶራህ • ወግ • ትምህርት",heroTitle:"የይሁዳዊነትን ጥልቀትና ውበት ይወቁ።",heroText:"በቶራህ፣ በታናክ፣ በአይሁድ ታሪክ፣ በዕብራይስጥና በይሁዳዊ አስተሳሰብ ላይ የተመሠረተ የትምህርት መድረክ።",explore:"የአይሁድ ትምህርትን ይመልከቱ",mission:"ዓላማችን",learnEyebrow:"ይመርምሩ",learnTitle:"ለመማርና ለማወቅ የተዘጋጀ ቦታ",learnText:"የአይሁድን መሠረታዊ ትምህርቶች በተደራጁ ትምህርቶችና ምንጭ በተጠቀሱ ጽሑፎች ይመርምሩ።",torah:"ቶራህና ታናክ",torahText:"የዕብራይስጥ ጽሑፍ፣ ትርጉም፣ አውድና የጥንታዊ ራቢዎች ትርጓሜ።",halakha:"ሃላካ",halakhaText:"የአይሁድ ሥርዓት፣ ሚትዝቮትና የሃላካ መሠረቶች።",history:"የአይሁድ ታሪክ",historyText:"በአይሁድ ታሪክ ውስጥ ያሉ ሰዎች፣ ቦታዎችና ክስተቶች።",apologetics:"የይሁዳዊ መከላከያ",apologeticsText:"የሃይማኖት አቤቱታዎችን በታናክ፣ በአይሁድ ምንጮችና በታሪክ መመርመር።",hebrew:"ዕብራይስጥ ይማሩ",hebrewText:"ማንበብን፣ ቃላትንና የመጽሐፍ ቅዱስ ዕብራይስጥን ይማሩ።",digital:"ዲጂታል ቤተ መጻሕፍት",digitalText:"የትምህርት መርጃዎችና የጥናት መመሪያዎች ስብስብ።",sourcesEyebrow:"ከምንጮች ጋር ይማሩ",sourcesTitle:"ጽሑፉን ያክብሩ፤ አውዱን ይረዱ።",sourcesText:"የመጽሐፍ ቅዱስ ክፍሎችን፣ የጥንታዊ ተንታኞችን፣ ታሪካዊ ማስረጃዎችንና ዘመናዊ ማብራሪያዎችን በግልጽ ለይተን ማቅረብ ዓላማችን ነው።",aiTitle:"አማራጭ የAI የጥናት ረዳት",aiText:"ይህ አማራጭ መሣሪያ ርዕሶችን ለማግኘትና ጥናትን ለማደራጀት ሊረዳ ይችላል። ራቢ አይደለም፤ የሃላካ ውሳኔ አይሰጥም፤ የመጀመሪያ ምንጮችንና ብቁ አስተማሪዎችን መተካት የለበትም።",aiLater:"በቀጣይ ደረጃ ይጨመራል",libraryEyebrow:"ከቤተ መጻሕፍቱ",libraryTitle:"የትምህርት ጉዞዎን ይጀምሩ",libraryText:"እነዚህ የናሙና ርዕሶች ናቸው። ሙሉ ትምህርቶችና ምንጮች በቀጣይ ይጨመራሉ።",article1:"ይሁዳዊነት ምንድን ነው?",article1Text:"እምነት፣ ቃል ኪዳን፣ ቶራህና የአይሁድ ሕዝብ።",article2:"የታናክን ክፍል እንዴት ማጥናት ይቻላል?",article2Text:"ዕብራይስጡን ማንበብ፣ አውዱን መመርመርና ትርጓሜዎችን ማነጻጸር።",article3:"የዕብራይስጥ የመጀመሪያ እርምጃዎች",article3Text:"ፊደላት፣ አናባቢዎች፣ ሥሮችና መሠረታዊ ቃላት።",aboutEyebrow:"ስለ ፕሮጀክቱ",aboutTitle:"በአይሁድ ምንጮች ላይ የተመሠረቀ እውቀት",aboutText:"Return to Judaism በአማርኛ፣ በዕብራይስጥና በእንግሊዝኛ የሚያቀርብ የትምህርት መድረክ እየተገነባ ነው። ጥንቃቄ ያለውን ጥናት፣ ለወግ አክብሮትንና ምንጮችን በግልጽ መጠቀምን እናበረታታለን።",footerText:"ቶራህ • ወግ • ትምህርት"},
+he:{navStudy:"לימוד",navLibrary:"ספרייה",navAbout:"אודות",navContact:"יצירת קשר",eyebrow:"תורה • מסורת • לימוד",heroTitle:"גלו את העומק והיופי של היהדות.",heroText:"מרחב לימוד לתורה, לתנ״ך, להיסטוריה יהודית, לעברית ולהגות יהודית — על בסיס מקורות ובאחריות.",explore:"לימוד יהדות",mission:"החזון שלנו",learnEyebrow:"לגלות",learnTitle:"מקום ללמוד ולגלות",learnText:"נושאי יסוד ביהדות באמצעות שיעורים מסודרים ומאמרים המלווים במקורות.",torah:"תורה ותנ״ך",torahText:"הטקסט העברי, תרגומים, הקשר ופרשנות יהודית קלאסית.",halakha:"הלכה",halakhaText:"מנהג, מצוות ויסודות החיים ההלכתיים.",history:"היסטוריה יהודית",historyText:"אנשים, מקומות ואירועים בתולדות העם היהודי.",apologetics:"הגות והגנה יהודית",apologeticsText:"בחינת טענות דתיות לאור התנ״ך, מקורות יהודיים והיסטוריה.",hebrew:"לימוד עברית",hebrewText:"קריאה, אוצר מילים והבנת עברית מקראית.",digital:"ספרייה דיגיטלית",digitalText:"אוסף מתפתח של חומרי לימוד ומדריכי עיון.",sourcesEyebrow:"לומדים עם מקורות",sourcesTitle:"מכבדים את הטקסט. מבינים את ההקשר.",sourcesText:"מטרתנו להנגיש לימוד יהודי תוך הבחנה ברורה בין פסוקים, פרשנים קלאסיים, ראיות היסטוריות והסברים בני זמננו.",aiTitle:"עוזר לימוד AI אופציונלי",aiText:"כלי אופציונלי עשוי לסייע באיתור נושאים ובארגון הלימוד. הוא אינו רב, אינו פוסק הלכה ואינו מחליף מקורות ראשוניים או מורים מוסמכים.",aiLater:"יתווסף בשלב עתידי",libraryEyebrow:"מהספרייה",libraryTitle:"התחילו את מסע הלימוד",libraryText:"אלה נושאים לדוגמה. שיעורים מלאים ומראי מקומות יתווספו בהמשך.",article1:"מהי יהדות?",article1Text:"אמונה, ברית, תורה והעם היהודי.",article2:"כיצד ללמוד פסוק בתנ״ך",article2Text:"קוראים את העברית, בוחנים הקשר ומשווים פרשנים.",article3:"צעדים ראשונים בעברית",article3Text:"אותיות, ניקוד, שורשים ואוצר מילים בסיסי.",aboutEyebrow:"על הפרויקט",aboutTitle:"ידע המבוסס על מקורות יהודיים",aboutText:"Return to Judaism נבנה כמשאב לימודי רב־לשוני באמהרית, בעברית ובאנגלית. אנו מבקשים לעודד לימוד מעמיק, כבוד למסורת ושימוש שקוף במקורות.",footerText:"תורה • מסורת • לימוד"}
+};
+const language=document.getElementById('language');
+function setLanguage(lang){const dict=translations[lang]||translations.en;document.documentElement.lang=lang;document.documentElement.dir=lang==='he'?'rtl':'ltr';document.querySelectorAll('[data-i]').forEach(el=>{const key=el.dataset.i;if(dict[key])el.textContent=dict[key]});document.body.classList.toggle('rtl',lang==='he');}
+language.addEventListener('change',e=>setLanguage(e.target.value));
+document.getElementById('menu').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
